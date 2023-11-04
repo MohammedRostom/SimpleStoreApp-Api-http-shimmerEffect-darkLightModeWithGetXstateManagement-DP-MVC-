@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:flutter_stripe_payment/constains.dart';
-import 'package:flutter_stripe_payment/home_screen.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:simpleapp/bin.dart';
+import 'package:simpleapp/services/constains.dart';
+import 'package:simpleapp/services/get_all_product_service.dart';
+import 'package:simpleapp/views/homePage.dart';
 
 void main() {
   Stripe.publishableKey = ApiKeys.PublischedKey;
@@ -14,8 +17,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
+    return GetMaterialApp(
+      initialBinding: Bind(),
+      home: const HomePage(),
     );
   }
 }

@@ -1,9 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:flutter_stripe_payment/constains.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:simpleapp/services/constains.dart';
 
 abstract class PaymentManager {
-  static Future<void> makePayment(int amount, String currency) async {
+  static Future<void> makePayment(var amount, String currency) async {
     try {
       String clientSecret =
           await _getClientSecret((amount * 100).toString(), currency);
