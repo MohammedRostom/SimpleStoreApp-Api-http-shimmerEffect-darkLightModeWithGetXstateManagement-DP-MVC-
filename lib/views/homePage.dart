@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
                   ? Get.changeTheme(ThemeData.light())
                   : Get.changeTheme(ThemeData.dark());
             },
-            child: Text("child")),
+            child: Text("Dark/light")),
       ),
       body: SafeArea(
         child: GetBuilder<productcontreoller>(
